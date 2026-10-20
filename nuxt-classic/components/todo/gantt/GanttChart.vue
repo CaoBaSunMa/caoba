@@ -103,14 +103,12 @@ const tasks = ref([
 const todoStore = useTodoStore();
 const viewMode = computed(() => todoStore.$state.vm);
 
-console.log("vm:", viewMode);
-
-const logProgress = (task, progress) => {
-  console.log(task, progress);
+const logProgress = () => {
+  // HkGantt @progress-change 回调占位，如需接入后端在此处理
 };
 
-const logDateChange = (task, start, end) => {
-  console.log(task, start, end);
+const logDateChange = () => {
+  // HkGantt @date-change 回调占位，如需接入后端在此处理
 };
 
 onMounted(() => {

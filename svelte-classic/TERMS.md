@@ -1,6 +1,6 @@
-# nuxt-classic 中文翻译术语表
+# svelte-classic 中文翻译术语表
 
-本文件为 nuxt-classic 翻译各批次的统一术语基准（与已完成翻译的 vue-classic 保持一致）。翻译前必须阅读。如需参考已译好的 vue-classic 对应模块，可将 `vue-classic/src/pages/`、`vue-classic/src/data/`、`vue-classic/src/layout/` 中同源文件的译法作为对照。
+本文件为 svelte-classic 翻译各批次的统一术语基准（与已完成翻译的 vue-classic 保持一致）。翻译前必须阅读。如需参考已译好的 vue-classic 对应模块，可将 `vue-classic/src/pages/`、`vue-classic/src/data/`、`vue-classic/src/layout/` 中同源文件的译法作为对照。
 
 ## 菜单/导航术语（sidebarMenu.js + Sidebar.vue）
 | 英文 | 中文 |

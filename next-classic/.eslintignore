@@ -1,0 +1,12 @@
+# 构建产物
+.next/
+out/
+build/
+dist/
+
+# 依赖
+node_modules/
+
+# 第三方 vendored 代码：自带 .eslintrc / package.json，不参与本项目的 lint
+# （其 .eslintrc 依赖未安装的 eslint-plugin-prettier，会让 next build 的 lint 阶段直接失败）
+src/components/@hk-gantt/gantt-master/

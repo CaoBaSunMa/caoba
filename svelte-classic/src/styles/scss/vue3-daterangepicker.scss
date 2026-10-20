@@ -1,0 +1,361 @@
+
+// @import '../assets/daterangepicker.scss';
+
+// .calendars {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
+
+  // $week-width: 0px;
+
+  // .reportrange-text {
+  //   background: #fff;
+  //   cursor: pointer;
+  //   padding: 5px 10px;
+  //   border: 1px solid #ccc;
+  //   width: 100%;
+  //   overflow: hidden;
+  // }
+
+  .daterangepicker {
+    // flex-direction: column;
+    // display: flex;
+    // width: auto;
+
+    //les than 768
+    // @media screen and (max-width: 768px) {
+    //   &.show-ranges {
+    //     .drp-calendar.left {
+    //       border-left: 0px;
+    //     }
+
+    //     .ranges {
+    //       border-bottom: 1px solid #ddd;
+    //       width: 100%;
+
+    //       ::v-deep(ul) {
+    //         display: flex;
+    //         flex-wrap: wrap;
+    //         width: auto;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // @media screen and (max-width: 541px){
+    //   .calendars-container {
+    //     flex-wrap: wrap;
+    //   }
+    // }
+
+    // /*from 540 to 768*/
+    // @media screen and (min-width: 540px) {
+    //   min-width: 486px;
+    //   &.show-weeknumbers {
+    //     min-width: 486px + $week-width;
+    //   }
+    // }
+
+    // //more than 768
+    // @media screen and (min-width: 768px) {
+    //   &.show-ranges {
+    //     min-width: 682px;
+
+    //     &.show-weeknumbers {
+    //       min-width: 682px + $week-width;
+    //     }
+    //   }
+    // }
+
+    // &.single {
+    //   @media screen and (max-width: 340px) {
+    //     min-width: 250px;
+
+    //     &.show-weeknumbers {
+    //       min-width: 250px + $week-width;
+    //     }
+    //   }
+
+    //   @media screen and (min-width: 339px) {
+    //     min-width: auto;
+    //     &.show-ranges {
+    //       min-width: 356px;
+
+    //       &.show-weeknumbers {
+    //         min-width: 356px + $week-width;
+    //       }
+
+    //       .drp-calendar.left {
+    //         border-left: 1px solid #ddd;
+    //       }
+
+    //       .ranges {
+    //         //width: auto;
+    //         max-width: none;
+    //         flex-basis: auto;
+    //         border-bottom: 0;
+
+    //         ::v-deep(ul) {
+    //           display: block;
+    //           width: 100%;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+
+    &.show-calendar {
+      display: block;
+      top: auto;
+    }
+  }
+
+  .daterangepicker {
+		font-family: inherit;
+		border-color: $gray_light_3;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+
+		.drp-buttons .btn {
+			margin-left: .5rem;
+			padding: .25rem .5rem;
+			font-size: .875rem;
+			font-weight: 400;
+		}
+
+		//custom cancel button
+		.btn-secondary {
+			color: $black_2;
+			background-color: $gray_light_4;
+			border-color: $gray_light_4;
+
+			&:hover,
+			&:focus {
+				color: $gray_dark_3;
+				background-color: $gray_light_3;
+				border-color: $gray_light_3;
+			}
+		}
+
+		//custom apply button
+		.btn-success {
+			color: $white;
+			background-color: $primary;
+			border-color: $primary;
+
+			&:hover,
+			&:focus {
+				color: $white;
+				background-color: $primary_dark_1;
+				border-color: $primary_dark_1;
+			}
+		}
+
+		td {
+
+			&.active,
+			&.active:hover {
+				background-color: $primary;
+
+				&.available:hover {
+					background-color: $primary;
+				}
+			}
+
+			&.in-range {
+				background-color: $primary_light_5;
+				color: $black_2;
+
+				&.active,
+				&.active:hover {
+					background-color: $primary;
+				}
+			}
+
+			&.available:hover {
+				background-color: $gray_light_5;
+			}
+		}
+
+		th {
+			&.available:hover {
+				background-color: transparent;
+			}
+		}
+
+		.calendar-table {
+
+			th,
+			td {
+				min-width: 33px;
+				width: 33px;
+				height: 33px;
+				font-size: 0.875rem;
+				position: relative;
+				border: none;
+
+				&.active,
+				&.active:hover {
+					color: $white;
+
+					&.available:hover {
+						color: $white;
+					}
+				}
+			}
+
+			th {
+
+				&.next span,
+				&.prev span {
+					border-color: $gray_light_1;
+				}
+
+				&:hover {
+
+					&.next span,
+					&.prev span {
+						border-color: $black_2;
+					}
+				}
+			}
+		}
+
+		th.month {
+			width: auto;
+			font-size: 0.875rem;
+			color: $black_2;
+			letter-spacing: .5px;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+		
+
+		.drp-selected {
+			font-size: 0.875rem;
+			padding-right: .25rem;
+			color: $black_2;
+			font-weight: 500;
+			letter-spacing: 0.5px;
+		}
+
+		td.off,
+		td.off.in-range,
+		td.off.start-date,
+		td.off.end-date {
+			color: $gray_light_3;
+		}
+
+		select.hourselect,
+		select.minuteselect,
+		select.secondselect,
+		select.ampmselect {
+			background: $white;
+			width: 60px;
+			margin: .625rem auto;
+			border: 1px solid $gray_light_3;
+			padding: .25rem;
+			border-radius: .25rem;
+			font-size: 0.875rem;
+			color: $black_2;
+		}
+
+		select.monthselect,
+		select.yearselect {
+			background: $white;
+			border: 1px solid $gray_light_3;
+			padding: .25rem;
+			border-radius: .25rem;
+			font-size: 0.875rem;
+			color: $black_2;
+		}
+
+		.calendar-time{
+			line-height: 50px;
+		}
+
+		.ranges li {
+			font-size: 0.875rem;
+			padding: .625rem .75rem;
+
+			&:hover {
+				background-color: $gray_light_5;
+			}
+
+			&.active {
+				background-color: $primary;
+			}
+		}
+
+		&.show-ranges .drp-calendar.left {
+			border-color: $gray_light_3;
+		}
+
+		.drp-calendar.single {
+			.calendar-time {
+				padding-right: 8px;
+			}
+		}
+	}
+
+  .daterangepicker {
+    &.opensleft {
+      /*top: 35px;*/
+      right: 10px;
+      left: auto;
+    }
+
+    &.openscenter {
+      /*top: 35px;*/
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    &.opensright {
+      /*top: 35px;*/
+      left: 10px;
+      right: auto;
+    }
+  }
+
+  /* Enter and leave animations can use different */
+  /* durations and timing functions.              */
+  .slide-fade-enter-active {
+    transition: all .2s ease;
+  }
+
+  .slide-fade-leave-active {
+    transition: all .1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+
+  .slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for <2.1.8 */
+  {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+
+  .vue-daterange-picker {
+    position: relative;
+    display: inline-block;
+    min-width: 60px;
+
+    .show-ranges.hide-calendars {
+      width: 150px;
+      min-width: 150px;
+    }
+  }
+
+  .inline {
+    .daterangepicker {
+      position: static;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
